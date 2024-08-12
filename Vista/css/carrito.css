@@ -1,0 +1,159 @@
+/* DISEÑO DEL CARRITO */
+/*VARIABLES */
+/*GLOBAL*/
+:root{
+    --azul:#1e90ff;
+    --letra: 'Times New Roman', Times, serif;
+}
+
+.contenedroPrincipal{
+    margin-top: 20px;
+}
+.imagenP,.datosP,.cantidadP{
+    position: relative;
+    margin: 0;
+    padding:0;
+}
+.fotoProducto{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+/*chrome  Edge  Opera   Para sacar las flechas al input tipo number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+/*FIREFOX*/
+input[type=number]{
+
+    width: 60px;
+    -moz-appearance: textfield;
+}
+/* POSICIONAMIENTO ESPECIFICO DE LA IMAGEN Y LA DESCRIPCION DEL PRODUCTO*/
+.valorPrecio{
+
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.nombre, .detalle, .precio{
+    position: absolute;
+    left:10%;
+    font-family:var(--letra);
+}
+.nombre{
+    top:0;
+}
+.detalle{
+    top:30%
+}
+.precio{
+    top:60%;
+}
+.fotoProducto{
+    position: relative;
+    left:20%;
+}
+.botonSuma, .botonResta{
+    background-color:white;
+    color:dark;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#suma{
+    margin-right: 10px;
+}
+#resta{
+    width:20px;
+    margin-left:10px;
+}
+.itemCarrito{
+    border: 1px solid var(--azul);
+}
+
+.eliminarItem{
+    position: relative;
+    left: 83%;
+}
+
+/* DISEÑO DEL APARTADO PRECIO DE LA COMPRA*/
+.precioTotal{
+    position: static;
+    box-shadow: 10px 10px 10px antiquewhite;
+    height:200px;
+    background-color: white
+}
+
+#titulo{
+    position:relative;
+    left: 15%;
+    top:10%;
+}
+.comprar{
+    position: relative;
+    padding: 5px;
+    display: block;
+    margin-left: 40%;
+    font-size:larger;
+}
+
+#tituloPrecio{
+    position: relative;
+    display: inline;
+}
+
+#signoPrecio{
+    position: relative;
+    font-size: 25px;
+}
+#signoPrecio, #tituloPrecio{
+    top:30px;
+    left: 50px;
+}
+
+/*DISEÑO DEL MODAL DE LA COMPRA PAGADA*/
+.cartel{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 250px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid blue;
+    z-index:3;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+#icono{
+    display: inline-block;
+    transform: translate(390px,-60px);
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: rgb(110, 8, 136);   
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.hidden{
+    display: none;
+}

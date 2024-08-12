@@ -1,0 +1,104 @@
+
+/* deseño del login con su imagen */
+.card-img-top{
+    width: auto;
+    height:auto;
+}
+
+    /*fondo del input type password y nombre de INDEXGRILLA:PHP*/
+#password:focus{
+    background-color: aquamarine;
+    
+}
+#nombre:focus{
+    background-color: aquamarine;
+} 
+#mostrar{
+    display: block;
+}
+
+/* Personaliza el error del formulario login*/
+.error-fail-alert{
+    border:1px dotted red;
+    color: red;
+}
+
+
+
+/*DISEÑO DEL FORMULARIO DE REGISTER*/
+.registro{
+    background-image: linear-gradient(to top,rgba(0,0,255,0.99),rgba(0,0,0,0.99));   
+}
+.register{
+    margin-top: 3rem;
+}
+
+#tituloRegistro{
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    color: aliceblue;
+    font-weight: bolder;
+}
+
+.form-group, .btn{
+    color: white;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.productos{
+    background-color: rgb(238, 236, 215);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bolder;
+}
+
+/*DISEÑO DE INDEXGRILLA*/
+
+/*DISEÑO DEL MODAL DE LA COMPRA INICIADA*/
+.cartel{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 250px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid blue;
+    z-index:3;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+#icono{
+    display: inline-block;
+    transform: translate(390px,-60px);
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: rgb(110, 8, 136);   
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
