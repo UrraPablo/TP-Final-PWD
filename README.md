@@ -14,4 +14,8 @@ Para poder ejecutar correctamente el proyecto debe tener instalado:
 2. Npm (opcional)
 3. Xampp.
 
+Una vez instalado dirigaje a la carpeta htdocs y cree una carpeta donde se guardará el proyecto. 
+Abra su editor de codigo (VScode, por ejemplo) y dirijase a la ruta donde creó el directorio. Haga click en el boton verde de github
+y copie la url. Por último en el editor de código ejecute el siguiente comando git clone url. 
+
 
