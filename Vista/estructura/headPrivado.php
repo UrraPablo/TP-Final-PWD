@@ -51,7 +51,7 @@ if ($objSession->validar() && $objSession->permisos()) {    //&& $objSession->pe
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 fs-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Grupo N°5</a>
+    <a class="navbar-brand" href="../inicio/inicioIndex.php">Grupo N°5</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,7 +59,7 @@ if ($objSession->validar() && $objSession->permisos()) {    //&& $objSession->pe
       <!--**********************************************************************************-->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><i  class="bi bi-github"></i></a>
+          <a class="nav-link active" aria-current="page" href="https://github.com/UrraPablo/TP-Final-PWD"><i  class="bi bi-github"></i></a>
         </li>
         
         <!-- ***************************Opciones del menu dinamico segun tipo de usuario **************************************  -->
