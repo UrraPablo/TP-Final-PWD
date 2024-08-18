@@ -2,14 +2,14 @@
 include_once "../../../configuracion.php";
 $data = data_submitted();
 $objC=new AbmUsuario();
-$listaObj = $objC->buscar($data["idusuario"]);
-$id=$data["idusuario"]-1;
-$data["uspass"] = $listaObj[$id]->getPassword();
+$id=(int)$data['idusuario'];
+$listaObj = $objC->buscar(['idusuario'=>$id])[0];
+$data["uspass"] = $listaObj->getPassword();
+$data["usdeshabilitado"]=$listaObj->getDeshabilitado();
 $respuesta = false;
-if (isset($data['idusuario']) && $data['uspass'] && isset($data['usnombre']) && isset($data['usmail']) && isset($data['usdeshabilitado'])){
-    if($data['usdeshabilitado'] == "Si"){
-        $data['usdeshabilitado'] = "0000-00-00 00:00:00";
-    }
+var_dump($data);
+if (isset($data['idusuario']) && isset($data['usnombre']) && isset($data['usmail'])){
+        echo('entro al modificacion');
         $respuesta = $objC->modificacion($data);
     
     if (!$respuesta){

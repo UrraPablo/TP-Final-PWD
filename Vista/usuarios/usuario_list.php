@@ -67,9 +67,6 @@
             <div style="margin-bottom:10px">
                 <input name="usmail" class="easyui-textbox" required="true" label="Email:" style="width:100%">
             </div>
-            <div style="margin-bottom:10px">
-                <input name="usdeshabilitado" class="easyui-textbox" required="true" label="Deshabilitado:" style="width:100%">
-            </div>
         </form>
     </div>
     <div id="dlg-buttons">
@@ -126,7 +123,7 @@
                 },
                 success: function(result){
                     console.log(result);
-                    var result = eval('('+result+')');
+                    //var result = eval('('+result+')');
                     if (result.errorMsg){
                         $.messager.show({
                             title: 'Error',
