@@ -135,7 +135,7 @@ class Producto{
         $baseDatos=new BaseDatos();
         
         $sql="INSERT INTO producto (pronombre,prodetalle,procantstock,precio,imagen)
-        VALUES ('".$this->getNombre()."','".$this->getDetalle()."',".$this->getStock().",".$this->getPrecio().",".$this->getImagen().");"; 
+        VALUES ('".$this->getNombre()."','".$this->getDetalle()."',".$this->getStock().",".$this->getPrecio().",'".$this->getImagen()."');"; 
         if($baseDatos->Iniciar()){
             if($baseDatos->Ejecutar($sql)){
                 $salida=true;

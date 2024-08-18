@@ -168,7 +168,7 @@ class AbmProducto{
                     $where.=" and precio =".$param['precio']."";
                 }// fin if 
                 if(isset($param['imagen'])){// identifica si esta la clave (atributo de la tabla)
-                    $where.=" and imagen =".$param['imagen']."";
+                    $where.=" and imagen ='".$param['imagen']."'";
                 }// fin if 
         }// fin if
         $arreglo=$objProducto->listar($where);

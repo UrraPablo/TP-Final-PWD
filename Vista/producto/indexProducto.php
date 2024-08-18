@@ -114,7 +114,7 @@
                     return $(this).form('validate');
                 },
                 success: function(result){
-                    var result = eval('('+result+')');
+                    //var result = eval('('+result+')');
                     if (result.errorMsg){
                         $.messager.show({
                             title: 'Error',
