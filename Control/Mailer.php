@@ -51,7 +51,7 @@ class Mailer{
         $asunto='';
         $body='';
         $ultimoCE=$objCE->buscar(['idcompra'=>$idCompra,'cefechafin'=>'null'])[0];
-        var_dump($ultimoCE);
+       // var_dump($ultimoCE);
         if($ultimoCE!=null){
             $idCET = $ultimoCE->getObjCompraEstadoTipo()->getId();
             switch($idCET){

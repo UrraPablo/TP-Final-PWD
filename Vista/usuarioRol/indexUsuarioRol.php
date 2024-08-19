@@ -35,10 +35,11 @@ $listaUsuariorol = $objAbmUsuariorol->buscar(null);
         foreach($listaUsuario as $unUsuario){
           $id = $unUsuario->getId();
           $roles = $objAbmUsuariorol->buscar(['idusuario'=>$id]);
-          $nombre =$roles[0]->getObjUsuario()->getNombre();
+          //var_dump($roles[0]->getObjUsuario()->getNombre());
           foreach($roles as $unRol){
             $idRol = $unRol->getObjRol()->getId();
             $descripcion = $unRol->getObjRol()->getDescripcion();
+            $nombre =$unRol->getObjUsuario()->getNombre();
           ?>
           <tr class="datosRolUsuario">
             <th class="idusuario" scope="row" value="<?php echo($id); ?>"> <?php echo($id); ?> </th>

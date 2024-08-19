@@ -98,7 +98,7 @@ $(function(){
                     url:'../carrito/accionCarritoFinalizado.php',
                     data:dato,
                     success:function(res){
-                        console.log(res);
+                        //console.log(res);
                         $('#tituloPrecio').text(precioActual.toFixed(2));
                         elementoAEliminar.remove();
                     },// fin function
@@ -151,11 +151,11 @@ $(function(){
                     url:'../carrito/accionCarritoFinalizado.php',
                     data:{'idcompra':idcompra,'idCI':id,'cantidad':cantidad},
                     success:function(res){
-                        //let salida = JSON.parse(res);
-                        //console.log(salida);
                         console.log(res);
-                        //console.log(res=='{"resultado":true}');
-                        if(res){
+                        let s = JSON.parse(res);
+                        console.log(s.compra);
+                        if(s.compra==true){
+                            console.log('entro');
                             $('.contenedorPrincipal').remove();
                             modal();
                             

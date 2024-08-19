@@ -38,17 +38,24 @@ if($datos['accion']=="cerrar"){
 // ACCIONES RELACIONADAS CON LA PAGINA REGISTRER 
 if($datos['accion']=='nuevo'){
     $objAbmUsuario=new AbmUsuario();
+    $objUR =new AbmUsuarioRol;
+    $idCliente = 3; // se asigna el id del cliente por defecto
     $mensaje=[];
     $datos['uspass']=md5($datos['uspass']);
-    $id = -100; // como es nuevo me que no se repita el iD del usuario
+    $id = -100; // como es nuevo que no se repita el iD del usuario
     $mailRepetido = $objAbmUsuario->mailRepetido($datos['usmail'],$id);
     $nombreRepetido = $objAbmUsuario->nombreRepetido($datos['usnombre'],$id);
     
-    // VALIDACION DE NO REPITENCIA DEL NOMBRE Y PASSWORD
+    // VALIDACION DE NO REPITENCIA DEL NOMBRE Y MAIL
     if(!$mailRepetido){
         if(!$nombreRepetido){
-            $mensaje['nuevo']='ok';
-           $objAbmUsuario->alta($datos);
+            $mensaje["nuevo"]='ok';
+           $res = $objAbmUsuario->alta($datos);
+            if($res){
+                $usuarioNuevo = $objAbmUsuario->buscar(['usmail'=>$datos['usmail']])[0];
+                $objUR->alta(['idusuario'=>$usuarioNuevo->getId(),'idrol'=>$idCliente]);
+
+            }// fin if 
         }// fin if 
         else{
             $mensaje['nuevo']='nombreRepetido';
@@ -58,6 +65,7 @@ if($datos['accion']=='nuevo'){
     else{
         $mensaje['nuevo']='mailRepetido';
     }// fin else
+
     echo(json_encode($mensaje));
 }// fin if 
 

@@ -25,6 +25,7 @@ $(function () {
                 url:'../login/accionLogin.php',
                 data:{'nombre':$("#nombre").val(),'password':$("#password").val(),'accion':$("#accion").val()},
                 success:function(r){
+                    console.log(r);
                     let resp=JSON.parse(r);
                     //console.log(resp.respuesta);
                     if(resp.respuesta==false){

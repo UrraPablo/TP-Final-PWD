@@ -23,16 +23,20 @@ if(isset($datos['idItem'])){
 
 // CAMBIO DE ESTADO DE LA COMPRA
 if(isset($datos['idcompra'])&&isset($datos['idCI'])&&isset($datos['cantidad'])){
+    $salida=array();
     $verifica = $objC->verificarProductos($datos);
     if(count($verifica)==0){ // significa que no hay ningun item del producto que supere el stock del mismo
+        $salida["compra"]=true;
         $objC->registrarProductos($datos);
         $r=$objC->finalizarCompra($datos['idcompra']);
-        echo(json_encode($r));
+        //echo(json_encode($r));
     }// fin if 
     else{
-
-        echo(json_encode($verifica));
+        $salida["compra"]=$verifica;
+        //echo(json_encode($verifica));
     }// fin else
+    
+    echo(json_encode($salida));
     
 }// fin if 
 

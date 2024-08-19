@@ -55,7 +55,7 @@
                 <input name="precio" class="easyui-textbox" required="true" label="Precio:" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
-                <input name="imagen" class="easyui-textbox" required="true" label="Imagen:" style="width:100%">
+                <input type="file" name="imagen"  required="true" label="Imagen:" style="width:100%">
             </div>
             
         </form>
